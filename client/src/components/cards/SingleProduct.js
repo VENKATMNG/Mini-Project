@@ -22,8 +22,10 @@ const SingleProduct = ({ product, onStarClick, star }) => {
   const { user, cart } = useSelector((state) => ({ ...state }));
   const dispatch = useDispatch();
 
-  const { title, images, description, _id } = product;
-
+  const title="Dell laptop";
+  const images={Laptop} ;
+  const description="THe DEll laptop is here"
+  const _id=1
   const handleAddToCart = () => {
     // create cart array
     let cart = [];
@@ -61,13 +63,9 @@ const SingleProduct = ({ product, onStarClick, star }) => {
   return (
     <>
       <div className="col-md-7">
-        {images && images.length ? (
-          <Carousel showArrows={true} autoPlay infiniteLoop>
-            {images && images.map((i) => <img src={i.url} key={i.public_id} />)}
-          </Carousel>
-        ) : (
+       
           <Card cover={<img src={Laptop} className="mb-3 card-image" />}></Card>
-        )}
+    
 
         <Tabs type="card">
           <TabPane tab="Description" key="1">

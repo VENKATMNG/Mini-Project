@@ -3,7 +3,7 @@ import { getProducts, getProductsCount } from "../../functions/product";
 import ProductCard from "../cards/ProductCard";
 import LoadingCard from "../cards/LoadingCard";
 import { Pagination } from "antd";
-import laptop from "../../images/lapp.jpg";
+import laptop from "../../images/hp.jpg";
 import { Card, Tooltip } from "antd";
 const BestSellers = () => {
   const [products, setProducts] = useState([]);
